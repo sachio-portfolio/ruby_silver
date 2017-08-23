@@ -203,10 +203,32 @@ even = [2,4,6]
 num = odd + even
 p num.sort
 ```
-A.nil
-B.[]
-C.[1,3,5,2,4,6]
-D.[1,2,3,4,5,6]
+- A.nil
+- B.[]
+- C.[1,3,5,2,4,6]
+- D.[1,2,3,4,5,6]
+---
+#### 問題18. 下記の正規表現にマッチする文字列を2つ選択してください。
+```
+/^[hc].*o$/i
+```
+- A.Hello
+- B.holland
+- C.Cello
+- D.h35L320
+---
+#### 問題19. 以下のコードを実行したときの出力として適切な物を1つ選択してください。
+```
+Greeting = "Hello Ruby"
+Greeting = "Hi Ruby"
+p Greeting
+```
+- A.エラーが発生
+- B.Greetingは定数のためwarningが発生するが、"Hi Ruby"と出力される
+- C.Greetingは定数のため"Hello Ruby"が出力される
+- D.Greetingは定数のためwaringが発生して"Hello Ruby"と出力される
+
+
 
 
 

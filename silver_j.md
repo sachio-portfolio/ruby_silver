@@ -150,6 +150,70 @@ p __(1)__    #=>[1,2,3]
 - B.a[1..2]
 - C.a.slice(0,3)
 - D.a.slice(0...2)
+---
+#### 問題13. 以下のコードを実行したときの出力として適切な物を1つ選択してください。
+```
+str = "RubyAssociation".chomp
+```
+- A."RubyAssociation\r"	
+- B."RubyAssociation"	
+- C."RubyAssociation\r\n"	
+- D."RubyAssociation\r\n\r\n"
+---
+#### 問題14. 以下のコードを実行したときの出力として適切な物を1つ選択してください。
+```
+str = "RubyAssociation\r\n".chop
+```
+- A."RubyAssociation"	
+- B."RubyAssociation\r"	
+- C."RubyAssociation\r\n"	
+- D."RubyAssociation\r\n\r\n"
+---
+#### 問題15. 以下のコードにおける4行目io.rewindについて正しい説明を１つ選択してください。
+```
+File.open("foo.txt","r") do |io|
+puts io.gets
+ puts io.read
+  io.rewind
+  p lines = io.readlines
+end
+```
+- A.データを全て読み込んで、その各行を要素としてもつ配列を返す
+- B.ファイルポインターをファイルの先頭に移動する
+- C.IO から1バイトを読み込み整数として返す
+- D.レシーバと同じ IO を参照する新しい IO オブジェクトを返す
+---
+#### 問題16. 以下のコードを実行した時の出力に対して__（１）__に入る適切な記述を1つ選択してください。
+```
+mozart = ["Symphony","Piano Concerto", "Violin Concerto","Horn Concerto","Violin Sonata"]
+listend = ["Symphony","Violin Concerto","Horn Concerto"]
+p mozart__(1)__listend
+[出力]
+["Piano Conerto","Violin Sonata"]
+```
+- A.|	
+- B.&	
+- C.-	
+- D.+	
+---
+#### 問題17. 以下のコードを実行したときの出力として適切な物を1つ選択してください。
+```
+odd = [1,3,5]
+even = [2,4,6]
+num = odd + even
+p num.sort
+```
+A.nil
+B.[]
+C.[1,3,5,2,4,6]
+D.[1,2,3,4,5,6]
+
+
+
+
+
+
+
 
 
 

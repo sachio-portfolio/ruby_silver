@@ -774,9 +774,9 @@ p a[0...1] #=>[1]
 p a[-2..4] #=>[4.5]  
 p a[-1..1] #=>[]  
 今までの表記は下記、Array#[]のシンタックスシュガーです。  
-p a[].()
-p a[].(0) #=>1
-Array#sliceはArray#[]の別名です。
+p a[].()  
+p a[].(0) #=>1  
+Array#sliceはArray#[]の別名です。  
 
 ---
 #### 問題13
@@ -799,7 +799,7 @@ String#chopは文字列末尾の文字を1文字削除するためのメソッ�
 #### 【解答】
 B
 #### 【解説】
-IO#rewindはファイルポインターを先頭に移動させます。
+IO#rewindはファイルポインターを先頭に移動させます。  
 IOクラスでは、IO#rewindの他に、 seek、gets、read、readlineなどのインスタンスメソッドをドキュメントでチェックしておく必要があります。
 
 ---
@@ -807,13 +807,13 @@ IOクラスでは、IO#rewindの他に、 seek、gets、read、readlineなどの
 #### 【解答】
 C
 #### 【解説】
-配列の要素（集合）に対して演算子を適用することができます。
+配列の要素（集合）に対して演算子を適用することができます。  
 試験前に、Array#演算子についてRuby公式ドキュメントを確認しておいてください。
-ary1 = [1,2,3,4,5]
-ary2 = [3,4,5,6,7]
-p ary1 | ary2   #=>[1,2,3,4,5,6,7]
-p ary1 & ary2 #=> [3,4,5]
-p ary1 - ary2  #=>[1,2]
+ary1 = [1,2,3,4,5]  
+ary2 = [3,4,5,6,7]  
+p ary1 | ary2   #=>[1,2,3,4,5,6,7]  
+p ary1 & ary2 #=> [3,4,5]  
+p ary1 - ary2  #=>[1,2]  
 
 ---
 #### 問題17
@@ -850,7 +850,7 @@ File#joinは定数FILE::SEPARATOR "/"を使って文字列を連結します。
 #### 【解答】
 A
 #### 【解説】
-VolumeクラスはSurfaceクラスを継承しています。
+VolumeクラスはSurfaceクラスを継承しています。  
 superを使えば、スーパークラスの同名のメソッドを呼び出すことことができます。superには通常のメソッドと同じように引数も指定可能です。
 
 ---
@@ -858,7 +858,7 @@ superを使えば、スーパークラスの同名のメソッドを呼び出す
 #### 【解答】
 B
 #### 【解説】
-String#slice(nth, len)は文字列のnth目からlen文字の文字列を作って返します。
+String#slice(nth, len)は文字列のnth目からlen文字の文字列を作って返します。  
 String#sliceは非破壊的なので、文字列"test code"が表示されます。代りに破壊的なメソッドであるString#slice!を使用すると、"code"と表示されます。
 
 ---
@@ -875,10 +875,10 @@ Ruby 2.0以降では、デフォルトのスクリプトエンコーディング
 B
 #### 【解説】
 以下のメソッドはHashがkeyをキーとして持つときはtrueを返します。
-Hash#has_key?(key) -> bool
-Hash#include?(key) -> bool
-Hash#key?(key) -> bool
-Hash#member?(key) -> bool
+Hash#has_key?(key) -> bool  
+Hash#include?(key) -> bool  
+Hash#key?(key) -> bool  
+Hash#member?(key) -> bool  
 
 ---
 #### 問題25

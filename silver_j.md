@@ -227,6 +227,140 @@ p Greeting
 - B.Greetingは定数のためwarningが発生するが、"Hi Ruby"と出力される
 - C.Greetingは定数のため"Hello Ruby"が出力される
 - D.Greetingは定数のためwaringが発生して"Hello Ruby"と出力される
+---
+#### 問題20. 以下のコードを実行したときの出力として適切な物を1つ選択してください。
+```
+p File.join("ruby", "exam","silver")
+```
+- A."./ruby"
+- B."./ruby/exam/silver"
+- C."rubyexamsilver"	
+- D."ruby/exam/silver"
+---
+#### 問題21. 以下のコードを実行したときの出力として適切な物を1つ選択してください。
+```
+class Surface
+  attr_reader :s
+  def initialize(x,y)
+   @s = x * y
+  end
+end
+
+class Volume < Surface
+  attr_reader :v
+  def initialize(x,y,z)
+    super(x,y)
+   @v = x * y * z
+  end
+end
+ 
+a = Volume.new(2,5,5)
+puts "#{a.v},#{a.s}"
+```
+- A.50,10
+- B.エラーが発生
+- C.50,50
+- D.10,10
+---
+#### 問題22. 以下のコードを実行したときの出力として適切な物を1つ選択してください。
+```
+string = "test code"
+string.slice(0,4)
+p string
+```
+- A."test"
+- B."test code"
+- C.nil
+- D.""
+---
+#### 問題23. 以下のコードを実行したときの出力として適切な物を1つ選択してください。
+```
+puts "ruby".encoding.name
+```
+- A.UTF-8
+- B.エラーが発生
+- C.US-ASCII	
+- D.ASCII-8BIT
+---
+#### 問題24. ハッシュ内にキーが存在するかどうか調べるメソッドの使いかたとして、*誤っている*ものを1つ選択してください。
+```
+cc = {"nz"=>"New Zealand", "ru"=>"Russia", "ar"=>"Argentina"}
+```
+- A. p cc.has_key?('nz')
+- B. p cc.contain?('nz')
+- C. p cc.key?('nz')
+- D. p cc.include?('nz')
+- E. p cc.member?('nz')
+---
+#### 問題25. 以下のコードを実行したときの出力として適切な物を1つ選択してください。
+```
+p "Hello there".class
+p String.superclass
+
+class Foo; end
+class Bar < Foo; end
+p Foo.superclass
+p Bar.superclass	
+```
+A.
+```
+String
+Kernel
+Module
+Module  
+```
+B.
+```
+Object
+Module
+Object
+FooClass
+```
+C.
+```
+String
+Module
+String
+FooClass
+```
+D.
+```
+String
+Object
+Object
+Foo   
+```
+E.
+```
+Object
+Object
+Module
+Kernel
+```
+---
+#### 問題26.	以下のコードを実行して文字列sの単語毎の出現回数を出力させたい。__(1)__,__(2)__に入る最適な組み合わせを１つ選択してください。
+```
+s = "To be or not to be, that is the question."
+hash = Hash.new(0)
+s.__(1)__(__(2)__) {|i| hash[i] += 1}
+p hash["be"] #=>2
+```
+A. (1)match  (2)/\w+/
+B. (1)sub   	(2)/\w+/
+C. (1)scan  	(2)/\w+/
+D. (1)search	(2)/\w+/
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

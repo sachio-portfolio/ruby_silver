@@ -663,7 +663,7 @@ Ruby on Rails
 - C. non ascii character detected : Ruby Association
 - D. non ascii character detected : Ruby on Rails
 ---
-##### 問題50 10進数で10を表すものを2つ選択してください。
+#### 問題50 10進数で10を表すものを2つ選択してください。
 - A.0xA
 - B.0xFF
 - C.012

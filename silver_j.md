@@ -440,7 +440,7 @@ D.
 str = "a,b,c,d" 
 p str.split(/,/, 2)
 ```
-= A.["a", "b,c,d"]
+- A.["a", "b,c,d"]
 - B.["a","b","c","d"]	
 - C.["a", "b,c,","d"]	
 - D."abcd"
@@ -455,10 +455,10 @@ end
 
 [1,2].greeting
 ```
-A.エラーが発生	
-B.nilが表示される	
-C.How are you?	
-D.[1,2]
+- A.エラーが発生	
+- B.nilが表示される	
+- C.How are you?	
+- D.[1,2]
 ---
 #### 問題35. 以下の正規表現とマッチするものを1つ選択してください。
 ```
@@ -512,10 +512,10 @@ p "100,200,300,400,500".___(1)___.___(2)___
 [出力]
 "100\n200\n300\n400\n500"
 ```
-A.(1)split(",") (2)join("\n")
-B.(1)to_a(",") (2)join("\n")
-C.(1)split(",") (2)concat("\n")
-D.(1)concat(",") (2)join("\n")
+- A.(1)split(",") (2)join("\n")
+- B.(1)to_a(",") (2)join("\n")
+- C.(1)split(",") (2)concat("\n")
+- D.(1)concat(",") (2)join("\n")
 ---
 #### 問題41. 以下のコードを出力した時の出力として正しいものを1つ選択してください。
 ```
@@ -613,6 +613,86 @@ puts Bar.count
 - A.num
 - B.@num	
 - C.@@num
+---
+#### 問題47. 以下のコードを実行した時の正しい出力結果を1つ選択してください。
+```
+unless false || nil
+  print "Hello\n"
+end
+```
+- A.Hello	
+- B.nil	
+- C.何も表示されない	
+- D.false
+---
+#### 問題48. 以下のコードを実行した時の正しい出力結果を1つ選択してください。
+```
+numbers = (1..20).to_a
+p numbers.detect{|x| x % 5 == 0}
+```
+- A.nil	
+- B.10	
+- C.5	
+- D.20	
+- E.[5,10,15]
+---
+#### 問題48. 以下のコードを実行した時の正しい出力結果を1つ選択してください。
+```
+numbers = (1..20).to_a
+p numbers.detect{|x| x % 5 == 0}
+```
+- A.nil	
+- B.10	
+- C.5	
+- D.20	
+- E.[5,10,15]
+---
+#### 問題48. 以下のコードを実行した時の正しい出力結果を1つ選択してください。
+```
+numbers = (1..20).to_a
+p numbers.detect{|x| x % 5 == 0}
+```
+- A.nil	
+- B.10	
+- C.5	
+- D.20	
+- E.[5,10,15]
+---
+#### 問題49. 以下のコードを実行した時の出力結果として正しいものを１つ選択してください。
+```
+class NonasciiError < StandardError 
+end
+
+File.open("sample.txt") do |io|
+  io.each_line do |str|
+    begin
+      raise(NonasciiError, "non ascii character detected") unless str.ascii_only?
+    rescue => ex
+      puts "#{ex.message} : #{str}"
+    end
+  end
+end
+
+[sample.txtの内容]
+Ruby Association
+ルビーアソシエーション
+るびー
+Ruby on Rails
+```
+- A. non ascii character detected : ルビーアソシエーション   
+   non ascii character detected : るびー
+- B. 何も表示されない   
+- C. non ascii character detected : Ruby Association    
+- D. non ascii character detected : Ruby on Rails
+---
+##### 問題50 10進数で10を表すものを2つ選択してください。
+- A.0xA	
+- B.0xFF
+- C.012	
+- D.077
+- E.0x10
+
+
 
 
 

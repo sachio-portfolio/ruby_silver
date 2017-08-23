@@ -345,10 +345,316 @@ hash = Hash.new(0)
 s.__(1)__(__(2)__) {|i| hash[i] += 1}
 p hash["be"] #=>2
 ```
-A. (1)match  (2)/\w+/
-B. (1)sub   	(2)/\w+/
-C. (1)scan  	(2)/\w+/
-D. (1)search	(2)/\w+/
+- A. (1)match  (2)/\w+/
+- B. (1)sub   	(2)/\w+/
+- C. (1)scan  	(2)/\w+/
+- D. (1)search	(2)/\w+/
+---
+#### 問題27. 組み込みライブラリ、Integer#chr（encoding)についての説明として正しいものはどれか、2つ選択してください。
+- A.引数を指定しなかった場合はエラーが発生する。
+- B.指定されたエンコーディングでselfを正しく解釈できない場合はnilが返される。
+- C.引数で与えられたencodingにおいて、selfを文字コードと見なし、それに対応する一文字からなる文字列を返す。
+- D.指定されたエンコーディングでselfを正しく解釈できない場合はエラーが発生する。
+---
+#### 問題28. 以下のプログラムがerrorと出力する場合__(1)__,__(2)__に入る最適な組み合わせを１つ選択してください。
+```
+s = "foo"
+___(1)___
+  s[4] = ?b
+___(2)___
+  puts "error"
+end
+```
+- A. ___(1)___は「try」、___(2)___は「catch NameError」である	
+- B. ___(1)___は「try」、___(2)___は「catch IndexError」である
+- C. ___(1)___は「begin」、___(2)___は「rescue NameError」である
+- D. ___(1)___は「begin」、___(2)___は「rescue IndexError」である
+---
+#### 問題29. 以下のコードを実行したときの出力として適切な物を1つ選択してください。
+```
+ary = []
+ary << 1 && false
+true || ary << 2
+false && ary << 3
+false || ary << 4
+p ary
+```
+- A. [1, 4]	
+- B. [1, 2, 3, 4]
+- C. [1]
+- D. [1, 2, 3]
+---
+#### 問題30. 以下のコードを実行したときの出力として適切な物を1つ選択してください。
+```
+p "foo" * 2 **2
+```
+- A.エラーが発生
+- B."foo4"	
+- C."foofoofoofoo"	
+- D."foofoo"
+---
+#### 問題31. 以下のコードを実行したときの出力として適切な物を1つ選択してください。
+```
+foo = [1,2,3]
+bar = foo
+baz = foo.dup
+
+bar[3] = 4
+p foo
+p bar
+p baz
+```
+A.
+```
+[1,2,3] 
+[1,2,3,4]          
+[1,2,3]
+```
+B.
+```
+[1,2,3,4]
+[1,2,3,4]
+[1,2,3,4]
+```
+C.
+```
+[1,2,3,4]
+[1,2,3,4]
+[1,2,3]
+```
+D.
+```
+エラーが発生
+```
+---
+#### 問題32. テキストファイルを読み込んだファイルオブジェクトから一行ずつ読み込み表示したい。目的に一致するIOクラスのメソッドを２つ選択してください。
+
+- A.readlines
+- B.read
+- C.gets
+- D.readline
+- E.find
+---
+#### 問題33. 以下のコードを実行したときの出力として適切な物を1つ選択してください。
+```
+str = "a,b,c,d" 
+p str.split(/,/, 2)
+```
+= A.["a", "b,c,d"]
+- B.["a","b","c","d"]	
+- C.["a", "b,c,","d"]	
+- D."abcd"
+---
+#### 問題34. 以下のコードを実行したときの出力として適切な物を1つ選択してください。
+```
+class Object
+  def greeting 
+    print "How are you?\n"
+   end
+end
+
+[1,2].greeting
+```
+A.エラーが発生	
+B.nilが表示される	
+C.How are you?	
+D.[1,2]
+---
+#### 問題35. 以下の正規表現とマッチするものを1つ選択してください。
+```
+/[0-9]{3}-[0-9]{4}/
+```
+- A.0x000000	
+- B.0-93-0-94	
+- C.93094	
+- D.333-4421
+---
+#### 問題36. 以下のコードを実行した際の出力として正しいものを選択してください。
+```
+/[0-9]{3}-[0-9]{4}/
+```
+- A.[]	
+- B.["a", "b", "c", "d", "e", "f"]	
+- C.nil	
+- D."abcdef"
+---
+#### 問題37. 以下のコードを実行した時にIOErrorが発生した。理由として考えられるものはどれか１つ選択してください。
+```
+File.open("foo.txt") do |io|
+  io.write(Time.now.strftime("%Y/%m/%d"))
+end
+```
+- A.書き込みモードでファイルが開かれているため	
+- B.読み込み可能なfoo.txtが存在しなかったため。	
+- C.読み込みモードでファイルが開かれているため	
+- D.読み書き両用モードでファイルが開かれているため
+---
+#### 問題38. 次のメソッドでDirクラスのクラスメソッドではないものをすべて選択してください。(2つ選択)
+- A.Dir.rmdir	
+- B.Dir.basename	
+- C.Dir.pwd	
+- D.Dir.extname	
+- E.Dir.getwd
+---
+#### 問題39. 以下のコードを実行した時の正しい出力結果を1つ選択してください。
+```
+puts "0123456789".delete("0-58-")
+```
+- A.234679
+- B.9	
+- C.679	
+- D.123458	
+- E.12345
+---
+#### 問題40. 下のコードを実行した時の出力に対して__(1)__,__(2)__に入る最適な組み合わせを１つ選択してください。
+```
+p "100,200,300,400,500".___(1)___.___(2)___
+[出力]
+"100\n200\n300\n400\n500"
+```
+A.(1)split(",") (2)join("\n")
+B.(1)to_a(",") (2)join("\n")
+C.(1)split(",") (2)concat("\n")
+D.(1)concat(",") (2)join("\n")
+---
+#### 問題41. 以下のコードを出力した時の出力として正しいものを1つ選択してください。
+```
+a = "foo"
+b = "foo"
+
+puts a.eql?(b)
+puts a.equal?(b)
+```
+A.
+```
+true
+true
+```
+B.
+```
+true
+false
+```
+C.
+```
+false
+true
+```
+D.
+```
+false
+false
+```
+---
+#### 問題42. 以下のコードを実行した時の正しい出力結果を1つ選択してください。
+```
+numbers = [3,89,40,39,29,10,50,59,69]
+num = numbers.inject do |i,j|
+  i > j ? i : j
+end
+p num
+```
+- A.89	
+- B.40	
+- C.10	
+- D.59
+---
+#### 問題43. 以下のコードを実行した時の正しい出力結果を1つ選択してください。
+```
+p String.instance_methods.grep(/strip/)
+```
+- A.[:strip, :lstrip, :rstrip, :strip!, :lstrip!, :rstrip!]	
+- B.nil	
+- C.[:strip]	
+- D.[]	
+- E.エラーが発生
+---
+#### 問題44. Hashの生成でエラーが発生するものを1つ選択してください。
+```
+A.capital ={:Sweden =>"Stockholm", :Norway=>"Oslo", :Finland=>"Helsinki"}	
+B.capital = {Sweden: "Stockholm", Norway: "Oslo", Finland: "Helsinki"}	
+C.capital = {"Sweden" = "Stockholm", "Norway" = "Oslo", "Finland" = "Helsinki"}
+D.capital = Hash[:Sweden,  "Stockholm", :Norway ,"Oslo", :Finland, "Helsinki"]
+```
+---
+#### 問題45. 以下の出力になる時の___(1)___に入るものとして適切なものを1つ選択してください。
+```
+___(1)___ 'uri'
+uri = URI::HTTP.build({host:'www.ruby.or.jp', path:'/ja/certification/examination/'})
+puts uri
+
+[出力]
+http://www.ruby.or.jp/ja/certification/examination/
+```
+- A.require	
+- B.include	
+- C.extend	
+- D.import
+---
+#### 問題46. 以下の出力になる時の___(1)___に入るものとして適切なものを1つ選択してください。
+```
+class Foo                                                                   
+  ___(1)___= 0
+  def self.count
+    ___(1)___ += 1
+  end
+end
+  
+class Bar < Foo
+end
+ 
+puts Foo.count
+puts Bar.count
+
+[出力]
+1
+2
+```
+- A.num
+- B.@num	
+- C.@@num
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
 
 
 
